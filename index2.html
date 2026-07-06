@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVASCRIPT DEMO</title>
+    <style>
+        body{
+    text-align:center;
+    font-family:Arial;
+    background:white;
+    color:black;
+    margin-top:50px;
+}
+
+button{
+    padding:10px 20px;
+    margin:10px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.dark{
+    background:black;
+    color:white;
+}
+</style>
+</head>
+<body>
+
+<h1>JavaScript Demo Website</h1>
+
+<button onclick="welcome()">Welcome</button>
+
+<button onclick="changeColor()">Change Background</button>
+
+<button onclick="showDate()">Show Date & Time</button>
+
+<button onclick="toggleMode()">Dark / Light Mode</button>
+
+<h2 id="date"></h2>
+
+<hr>
+
+<h2>Counter</h2>
+
+<h1 id="count">0</h1>
+
+<button onclick="increase()">+</button>
+
+<button onclick="decrease()">-</button>
+
+<button onclick="resetCounter()">Reset</button>
+
+<script>
+    // Welcome Message
+function welcome(){
+    alert("Welcome to JavaScript Website");
+}
+
+// Change Background Color
+function changeColor(){
+
+    let colors = ["red","green","blue","orange","pink","purple","yellow"];
+
+    let random = Math.floor(Math.random()*colors.length);
+
+    document.body.style.backgroundColor = colors[random];
+}
+
+// Show Date and Time
+function showDate(){
+
+    document.getElementById("date").innerHTML = new Date();
+}
+
+// Counter
+
+let count = 0;
+
+function increase(){
+
+    count++;
+
+    document.getElementById("count").innerHTML = count;
+}
+
+function decrease(){
+
+    count--;
+
+    document.getElementById("count").innerHTML = count;
+}
+
+function resetCounter(){
+
+    count = 0;
+
+    document.getElementById("count").innerHTML = count;
+}
+
+// Dark Mode
+
+function toggleMode(){
+
+    document.body.classList.toggle("dark");
+}
+</script>
+
+</body>
+</html>

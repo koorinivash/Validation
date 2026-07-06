@@ -57,7 +57,11 @@ form.addEventListener("submit", function(event){
     if(valid){
         document.getElementById("success").innerHTML="Registration Successful!";
 
-        form.reset();
+        setTimeout(function(){
+            window.location.href = "index2.html";
+        }, 500);
+        
+        
     }
 
 });
